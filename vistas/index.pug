@@ -1,0 +1,14 @@
+html
+    head
+        title= titulo
+    body
+        div.container   
+            input(type="text", id="nombre")
+            input(type="text", id="numero")
+            button(id="btn_add") Agregar contacto
+
+            each contacto in datos
+                p=`${contacto.agenda} -- ${contacto.numero}`
+                span(class="btn_delete" id=contacto.id) Eliminar
+
+    script(src="funciones.js")
